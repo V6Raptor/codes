@@ -110,12 +110,12 @@ if réponse == "oui": # Objet
         elif réponse == "non":
             msg = input ("Veuillez retapez votre message: ")
             print ("Votre message est: ", msg, "?")
-            réponse = input("Répondre oui ou non:* ")
+            réponse = input("Répondre oui ou non: ")
             
             while réponse != "oui":
                 msg = input ("Veuillez retapez votre message: ")
                 print ("Votre message est: ", msg, "?")
-                réponse = input("Répondre oui ou non:** ")
+                réponse = input("Répondre oui ou non: ")
             
             if réponse == "oui": # envoi message
                 print("Message validé !")
@@ -123,12 +123,12 @@ if réponse == "oui": # Objet
         else:
             msg = input ("Veuillez retapez votre message: ")
             print ("Votre message est: ", msg, "?")
-            réponse = input("Répondre oui ou non:* ")
+            réponse = input("Répondre oui ou non: ")
             
             while réponse != "oui":
                 msg = input ("Veuillez retapez votre message: ")
                 print ("Votre message est: ", msg, "?")
-                réponse = input("Répondre oui ou non:*** ")
+                réponse = input("Répondre oui ou non: ")
             
             if réponse == "oui": # envoi message
                 print("Message validé !")
@@ -137,12 +137,12 @@ if réponse == "oui": # Objet
     elif réponse == "non":
         message ["subject"] = input("Veuillez retapez l'objet: ")
         print ("L'objet est: ", message ["subject"], "?")
-        réponse = input("Répondre oui ou non:* ")
+        réponse = input("Répondre oui ou non: ")
             
         while réponse != "oui":
             message ["subject"] = input("Veuillez retapez l'objet: ")
             print ("L'objet est: ", message ["subject"], "?")
-            réponse = input("Répondre oui ou non:** ")
+            réponse = input("Répondre oui ou non: ")
             
         if réponse == "oui": # message personnalisé
             print ("Objet validé !")
@@ -156,12 +156,12 @@ if réponse == "oui": # Objet
             elif réponse == "non":
                 msg = input ("Veuillez retapez votre message: ")
                 print ("Votre message est: ", msg, "?")
-                réponse = input("Répondre oui ou non:* ")
+                réponse = input("Répondre oui ou non: ")
                 
                 while réponse != "oui":
                     msg = input ("Veuillez retapez votre message: ")
                     print ("Votre message est: ", msg, "?")
-                    réponse = input("Répondre oui ou non:** ")
+                    réponse = input("Répondre oui ou non: ")
                 
                 if réponse == "oui": # envoi message
                     print("Message validé !")
@@ -169,12 +169,12 @@ if réponse == "oui": # Objet
             else:
                 msg = input ("Veuillez retapez votre message: ")
                 print ("Votre message est: ", msg, "?")
-                réponse = input("Répondre oui ou non:* ")
+                réponse = input("Répondre oui ou non: ")
                 
                 while réponse != "oui":
                     msg = input ("Veuillez retapez votre message: ")
                     print ("Votre message est: ", msg, "?")
-                    réponse = input("Répondre oui ou non:*** ")
+                    réponse = input("Répondre oui ou non: ")
                 
                 if réponse == "oui": # envoi message
                     print("Message validé !")
@@ -183,12 +183,12 @@ if réponse == "oui": # Objet
         else:
             message ["subject"] = input("Veuillez retapez l'objet: ")
             print ("L'objet est: ", message ["subject"], "?")
-            réponse = input("Répondre oui ou non:* ")
+            réponse = input("Répondre oui ou non: ")
            
             while réponse != "oui":
                 message ["subject"] = input("Veuillez retapez l'objet: ")
                 print ("L'objet est: ", message ["subject"], "?")
-                réponse = input("Répondre oui ou non:*** ")
+                réponse = input("Répondre oui ou non: ")
             
             if réponse == "oui": # message personnalisé
                 msg = input ("Entrez votre message: ")
@@ -201,12 +201,12 @@ if réponse == "oui": # Objet
                 elif réponse == "non":
                     msg = input ("Veuillez retapez votre message: ")
                     print ("Votre message est: ", msg, "?")
-                    réponse = input("Répondre oui ou non:* ")
+                    réponse = input("Répondre oui ou non: ")
                     
                     while réponse != "oui":
                         msg = input ("Veuillez retapez votre message: ")
                         print ("Votre message est: ", msg, "?")
-                        réponse = input("Répondre oui ou non:** ")
+                        réponse = input("Répondre oui ou non: ")
                     
                     if réponse == "oui": # envoi message
                         print("Message validé !")
@@ -214,12 +214,12 @@ if réponse == "oui": # Objet
                 else:
                     msg = input ("Veuillez retapez votre message: ")
                     print ("Votre message est: ", msg, "?")
-                    réponse = input("Répondre oui ou non:* ")
+                    réponse = input("Répondre oui ou non: ")
                     
                     while réponse != "oui":
                         msg = input ("Veuillez retapez votre message: ")
                         print ("Votre message est: ", msg, "?")
-                        réponse = input("Répondre oui ou non:*** ")
+                        réponse = input("Répondre oui ou non: ")
                     
                     if réponse == "oui": # envoi message
                         print("Message validé !")
@@ -228,12 +228,12 @@ if réponse == "oui": # Objet
 elif réponse == "non":
     message = input("Veuillez retapez l'adresse du destinataire: ")
     print ("Le destinataire est : ", message, "?")
-    réponse = input("Répondre oui ou non:* ")
+    réponse = input("Répondre oui ou non: ")
     
     while réponse != "oui":
-        message ["to"] = input("Veuillez retapez l'adresse du destinataire:* ")
+        message ["to"] = input("Veuillez retapez l'adresse du destinataire: ")
         print ("Le destinataire est : ", message, "?")
-        réponse = input("Répondre oui ou non:** ")
+        réponse = input("Répondre oui ou non: ")
     
     if réponse == "oui": # Objet
         print ("Destinataire validé(e) !")
@@ -254,12 +254,12 @@ elif réponse == "non":
             elif réponse == "non":
                 msg = input ("Veuillez retapez votre message: ")
                 print ("Votre message est: ", msg, "?")
-                réponse = input("Répondre oui ou non:* ")
+                réponse = input("Répondre oui ou non: ")
                 
                 while réponse != "oui":
                     msg = input ("Veuillez retapez votre message: ")
                     print ("Votre message est: ", msg, "?")
-                    réponse = input("Répondre oui ou non:** ")
+                    réponse = input("Répondre oui ou non: ")
                 
                 if réponse == "oui": # envoi message
                     print("Message validé !")
@@ -267,12 +267,12 @@ elif réponse == "non":
             else:
                 msg = input ("Veuillez retapez votre message: ")
                 print ("Votre message est: ", msg, "?")
-                réponse = input("Répondre oui ou non:* ")
+                réponse = input("Répondre oui ou non: ")
                 
                 while réponse != "oui":
                     msg = input ("Veuillez retapez votre message: ")
                     print ("Votre message est: ", msg, "?")
-                    réponse = input("Répondre oui ou non:*** ")
+                    réponse = input("Répondre oui ou non: ")
                 
                 if réponse == "oui": # envoi message
                     print("Message validé !")
@@ -280,12 +280,12 @@ elif réponse == "non":
         elif réponse == "non": # Objet
             message ["subject"] = input("Veuillez retapez l'objet: ")
             print ("L'objet est: ", message ["subject"], "?")
-            réponse = input("Répondre oui ou non:* ")
+            réponse = input("Répondre oui ou non: ")
             
             while réponse != "oui": # Objet
-                message ["subject"] = input("Veuillez retapez l'adresse du destinataire:* ")
+                message ["subject"] = input("Veuillez retapez l'adresse du destinataire: ")
                 print ("L'objet est: ", message ["subject"], "?")
-                réponse = input("Répondre oui ou non:** ")
+                réponse = input("Répondre oui ou non: ")
             
             if réponse == "oui": # message personnalisé
                 print ("Objet validé !")
@@ -299,12 +299,12 @@ elif réponse == "non":
                 elif réponse == "non":
                     msg = input ("Veuillez retapez votre message: ")
                     print ("Votre message est: ", msg, "?")
-                    réponse = input("Répondre oui ou non:* ")
+                    réponse = input("Répondre oui ou non: ")
                     
                     while réponse != "oui":
                         msg = input ("Veuillez retapez votre message: ")
                         print ("Votre message est: ", msg, "?")
-                        réponse = input("Répondre oui ou non:** ")
+                        réponse = input("Répondre oui ou non: ")
                     
                     if réponse == "oui": # envoi message
                         print("Message validé !")
@@ -312,23 +312,23 @@ elif réponse == "non":
                 else:
                     msg = input ("Veuillez retapez votre message: ")
                     print ("Votre message est: ", msg, "?")
-                    réponse = input("Répondre oui ou non:* ")
+                    réponse = input("Répondre oui ou non: ")
                     
                     while réponse != "oui":
                         msg = input ("Veuillez retapez votre message: ")
                         print ("Votre message est: ", msg, "?")
-                        réponse = input("Répondre oui ou non:*** ")
+                        réponse = input("Répondre oui ou non: ")
                     
                     if réponse == "oui": # envoi message
                         print("Message validé !")
                 
         else: # Objet
-            message ["subject"] = input("Veuillez retapez l'adresse du destinataire:** ")
+            message ["subject"] = input("Veuillez retapez l'adresse du destinataire: ")
             print ("L'objet est: ", message ["subject"], "?")
-            réponse = input("Répondre oui ou non:* ")
+            réponse = input("Répondre oui ou non: ")
            
             while réponse != "oui": # Objet
-                message ["subject"] = input("Veuillez retapez l'adresse du destinataire:*** ")
+                message ["subject"] = input("Veuillez retapez l'adresse du destinataire: ")
                 print ("L'objet est: ", message ["subject"], "?")
                 réponse = input("Répondre oui ou non: ")
             
@@ -344,12 +344,12 @@ elif réponse == "non":
                 elif réponse == "non":
                     msg = input ("Veuillez retapez votre message: ")
                     print ("Votre message est: ", msg, "?")
-                    réponse = input("Répondre oui ou non:* ")
+                    réponse = input("Répondre oui ou non: ")
                     
                     while réponse != "oui":
                         msg = input ("Veuillez retapez votre message: ")
                         print ("Votre message est: ", msg, "?")
-                        réponse = input("Répondre oui ou non:** ")
+                        réponse = input("Répondre oui ou non: ")
                     
                     if réponse == "oui": # envoi message
                         print("Message validé !")
@@ -357,26 +357,26 @@ elif réponse == "non":
                 else:
                     msg = input ("Veuillez retapez votre message: ")
                     print ("Votre message est: ", msg, "?")
-                    réponse = input("Répondre oui ou non:* ")
+                    réponse = input("Répondre oui ou non: ")
                     
                     while réponse != "oui":
                         msg = input ("Veuillez retapez votre message: ")
                         print ("Votre message est: ", msg, "?")
-                        réponse = input("Répondre oui ou non:*** ")
+                        réponse = input("Répondre oui ou non: ")
                     
                     if réponse == "oui": # envoi message
                         print("Message validé !")
 
 
 else:
-    message = input("Veuillez retapez l'adresse du destinataire:** ")
+    message = input("Veuillez retapez l'adresse du destinataire: ")
     print ("Le destinataire est : ", message, "?")
-    réponse = input("Répondre oui ou non:* ")
+    réponse = input("Répondre oui ou non: ")
     
     while réponse != "oui":
-        message ["to"] = input("Veuillez retapez l'adresse du destinataire:*** ")
+        message ["to"] = input("Veuillez retapez l'adresse du destinataire: ")
         print ("Le destinataire est : ", message, "?")
-        réponse = input("Répondre oui ou non:*** ")
+        réponse = input("Répondre oui ou non: ")
     
     if réponse == "oui": # Objet
         print ("Destinataire validé(e) !")
@@ -397,12 +397,12 @@ else:
             elif réponse == "non":
                 msg = input ("Veuillez retapez votre message: ")
                 print ("Votre message est: ", msg, "?")
-                réponse = input("Répondre oui ou non:* ")
+                réponse = input("Répondre oui ou non: ")
                 
                 while réponse != "oui":
                     msg = input ("Veuillez retapez votre message: ")
                     print ("Votre message est: ", msg, "?")
-                    réponse = input("Répondre oui ou non:** ")
+                    réponse = input("Répondre oui ou non: ")
                 
                 if réponse == "oui": # envoi message
                     print("Message validé !")
@@ -410,12 +410,12 @@ else:
             else:
                 msg = input ("Veuillez retapez votre message: ")
                 print ("Votre message est: ", msg, "?")
-                réponse = input("Répondre oui ou non:* ")
+                réponse = input("Répondre oui ou non: ")
                 
                 while réponse != "oui":
                     msg = input ("Veuillez retapez votre message: ")
                     print ("Votre message est: ", msg, "?")
-                    réponse = input("Répondre oui ou non:*** ")
+                    réponse = input("Répondre oui ou non: ")
                 
                 if réponse == "oui": # envoi message
                     print("Message validé !")
@@ -423,12 +423,12 @@ else:
         elif réponse == "non":
             message ["subject"] = input("Veuillez retapez l'adresse du destinataire: ")
             print ("L'objet est: ", message ["subject"], "?")
-            réponse = input("Répondre oui ou non:* ")
+            réponse = input("Répondre oui ou non: ")
             
             while réponse != "oui":
-                message ["subject"] = input("Veuillez retapez l'adresse du destinataire:* ")
+                message ["subject"] = input("Veuillez retapez l'adresse du destinataire: ")
                 print ("L'objet est: ", message ["subject"], "?")
-                réponse = input("Répondre oui ou non:** ")
+                réponse = input("Répondre oui ou non: ")
             
             if réponse == "oui": # message personnalisé
                 print ("Objet validé !")
@@ -442,12 +442,12 @@ else:
                 elif réponse == "non":
                     msg = input ("Veuillez retapez votre message: ")
                     print ("Votre message est: ", msg, "?")
-                    réponse = input("Répondre oui ou non:* ")
+                    réponse = input("Répondre oui ou non: ")
                     
                     while réponse != "oui":
                         msg = input ("Veuillez retapez votre message: ")
                         print ("Votre message est: ", msg, "?")
-                        réponse = input("Répondre oui ou non:** ")
+                        réponse = input("Répondre oui ou non: ")
                     
                     if réponse == "oui": # envoi message
                         print("Message validé !")
@@ -455,25 +455,25 @@ else:
                 else:
                     msg = input ("Veuillez retapez votre message: ")
                     print ("Votre message est: ", msg, "?")
-                    réponse = input("Répondre oui ou non:* ")
+                    réponse = input("Répondre oui ou non: ")
                     
                     while réponse != "oui":
                         msg = input ("Veuillez retapez votre message: ")
                         print ("Votre message est: ", msg, "?")
-                        réponse = input("Répondre oui ou non:*** ")
+                        réponse = input("Répondre oui ou non: ")
                     
                     if réponse == "oui": # envoi message
                         print("Message validé !")
         
         else:
-            message ["subject"] = input("Veuillez retapez l'adresse du destinataire:** ")
+            message ["subject"] = input("Veuillez retapez l'adresse du destinataire: ")
             print ("L'objet est: ", message ["subject"], "?")
-            réponse = input("Répondre oui ou non:* ")
+            réponse = input("Répondre oui ou non: ")
            
             while réponse != "oui":
-                message ["subject"] = input("Veuillez retapez l'adresse du destinataire:*** ")
+                message ["subject"] = input("Veuillez retapez l'adresse du destinataire: ")
                 print ("L'objet est: ", message ["subject"], "?")
-                réponse = input("Répondre oui ou non:*** ")
+                réponse = input("Répondre oui ou non: ")
             
             if réponse == "oui": # message personnalisé
                 print ("Objet validé !")
@@ -487,12 +487,12 @@ else:
                 elif réponse == "non":
                     msg = input ("Veuillez retapez votre message: ")
                     print ("Votre message est: ", msg, "?")
-                    réponse = input("Répondre oui ou non:* ")
+                    réponse = input("Répondre oui ou non: ")
                     
                     while réponse != "oui":
                         msg = input ("Veuillez retapez votre message: ")
                         print ("Votre message est: ", msg, "?")
-                        réponse = input("Répondre oui ou non:** ")
+                        réponse = input("Répondre oui ou non: ")
                     
                     if réponse == "oui": # envoi message
                         print("Message validé !")
@@ -500,12 +500,12 @@ else:
                 else:
                     msg = input ("Veuillez retapez votre message: ")
                     print ("Votre message est: ", msg, "?")
-                    réponse = input("Répondre oui ou non:* ")
+                    réponse = input("Répondre oui ou non: ")
                     
                     while réponse != "oui":
                         msg = input ("Veuillez retapez votre message: ")
                         print ("Votre message est: ", msg, "?")
-                        réponse = input("Répondre oui ou non:*** ")
+                        réponse = input("Répondre oui ou non: ")
                     
                     if réponse == "oui": # envoi message
                         print("Message validé !")
