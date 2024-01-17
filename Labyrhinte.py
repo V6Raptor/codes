@@ -5,8 +5,9 @@ import pygame
 from pygame import gfxdraw
 
 class Player(object):
+
     def __init__(self):
-        self.rect = pygame.Rect(17, 256, 9, 9)
+        self.rect = pygame.Rect(40, 475, 9, 9)
 
     def move(self, dx, dy):
         if dx != 0:
@@ -31,12 +32,13 @@ class Player(object):
                 if dy < 0:
                     self.rect.top = wall.rect.bottom
 
-
 class Wall(object):
+
     def __init__(self, pos):
         walls.append(self)
-        self.rect = pygame.Rect(pos[0], pos[1], 16, 16)
+        self.rect = pygame.Rect(pos[0], pos[1], 32, 32)
 
+# draw_fog affiche le brouillard (zone noire autour du joueur)
 def draw_fog(screen, fog_color, player_rect, light_radius):
     fog_surface = pygame.Surface((screen.get_width(), screen.get_height()), pygame.SRCALPHA)
     fog_surface.fill((fog_color[0], fog_color[1], fog_color[2], 255))
@@ -54,12 +56,14 @@ os.environ["SDL_VIDEO_CENTERED"] = "1"
 pygame.init()
 
 pygame.display.set_caption("Get to the red square!")
-screen = pygame.display.set_mode((320, 240))
+screen = pygame.display.set_mode((1280, 720))  # Set the window size to 1280x720
+#screen = pygame.display.set_mode((1920, 1080)) #pour le debug de la map
 
 clock = pygame.time.Clock()
 walls = []
 player = Player()
 
+# Holds the level layout in a list of strings.
 level = """
 WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
 W            WWW      WWWW                       WWW     W
@@ -86,22 +90,23 @@ WWWWW WWWW WWWWW WWWW      WWW WW WW             WWWWWWW W
 WWWWW WWWW WWWWW WWWWWWWWWWWWW WW WWWWWWWWWWWWWW WWWWWWW W
 WWWWW WWWW WWWWW WWWWWWWWWWWWW WW WWWWWWWWWWWWWW WWWWWWW W
 W          WWWWW               WW                WWW     W
-WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWwwwwwwwww
 """.splitlines()[1:]
 
+# Parse the level string above. W = wall, E = exit
 x = y = 1
 for row in level:
     for col in row:
         if col == "W":
             Wall((x, y))
         if col == "E":
-            end_rect = pygame.Rect(x, y, 10, 10)
-        x += 18
-    y += 18
+            end_rect = pygame.Rect(x, y, 32, 32)
+        x += 33.17
+    y += 33.17
     x = 1
 
 running = True
-back = pygame.image.load("labyrinthe.jpg")
+back = pygame.image.load("labyrinthe1.jpg")
 
 camera_offset_x, camera_offset_y = 0, 0
 
@@ -117,15 +122,27 @@ while running:
         if e.type == pygame.KEYDOWN and e.key == pygame.K_ESCAPE:
             running = False
 
+    # Move the player if an arrow key is pressed
     key = pygame.key.get_pressed()
     if key[pygame.K_LEFT]:
-        player.move(-2, 0)
+        player.move(-4, 0)
     if key[pygame.K_RIGHT]:
-        player.move(2, 0)
+        player.move(4, 0)
     if key[pygame.K_UP]:
-        player.move(0, -2)
+        player.move(0, -4)
     if key[pygame.K_DOWN]:
-        player.move(0, 2)
+        player.move(0, 4)
+
+    # Affiche les blocs de collisions
+    '''
+    screen.blit(back, (0, 0))
+    for wall in walls:
+        pygame.draw.rect(screen, (0, 128, 64), wall.rect)
+    pygame.draw.rect(screen, (255, 0, 0), end_rect)
+    pygame.draw.rect(screen, (255, 200, 0), player.rect)
+    pygame.display.flip()
+    clock.tick(60)
+    '''
 
     camera_offset_x = max(0, min(player.rect.x - 160, 1050 - 320))
     camera_offset_y = max(0, min(player.rect.y - 120, 480 - 240))
@@ -135,6 +152,7 @@ while running:
     draw_fog(screen, (0, 0, 0), player.rect.move(-camera_offset_x, -camera_offset_y), light_radius)
 
     # Just added this to make it slightly fun ;)
+
     if player.rect.colliderect(end_rect):
         pygame.quit()
         sys.exit()
